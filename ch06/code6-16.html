@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>동적으로 객체 속성 추가</title>
+    <script>
+        // 변수 선언
+        var student = {};
+        student.이름 = '안우진';
+        student.취미 = '복싱';
+        student.특기 = '컴퓨터';
+        student.장래희망 = '의사';
+        student.toString = function () {
+            var output = '';
+            for (var key in this) {
+                // toString은 제외
+                if (key != 'toString') {
+                    output += key + '\t' + this[key] + '\n';
+                }
+            }
+            return output;
+        };
+        // 객체에 속성 추가
+//        with (student) {
+//            이름 = '안우진';
+//            취미 = '복싱';
+//            특기 = '컴퓨터';
+//            장래희망 = '의사';
+//            toString = function () {
+//                var output = '';
+//                for (var key in this) {
+//                    // toString은 제외
+//                    if (key != 'toString') {
+//                        output += key + '\t' + this[key] + '\n';
+//                    }
+//                }
+//                return output;
+//            };
+//        }
+//        student.이름 = '안우진';
+//        student.취미 = '악기';
+//        student.특기 = '프로그래밍';
+//        student.장래희망 = '생명공학자';
+
+        // 출력
+//        with (student) {
+//            output += '이름: ' + 이름 + '\n';
+//            output += '취미: ' + 취미 + '\n';
+//            output += '특기: ' + 특기 + '\n';
+//            output += '장래희망: ' + 장래희망 + '\n';
+//        }
+        alert(student.toString());
+    </script>
+</head>
+<body>
+
+</body>
+</html>

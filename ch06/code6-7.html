@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>this 키워드</title>
+    <script>
+        // 변수 선언
+        var person = {
+            name: '안우진',
+            eat: function (food) {
+                alert(this.name + '이 ' + food + '을/를 먹습니다.');
+            }
+        };
+
+        // 메서드 호출
+        person.eat('밥');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

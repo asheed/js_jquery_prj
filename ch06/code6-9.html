@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>객체 생성</title>
+    <script>
+        // 변수 선언
+        var output = '';
+        var student = {
+            이름: '안우진',
+            국어: 92, 수학: 100,
+            영어: 40, 과학: 84
+        };
+
+        // in 키워드 사용
+        output += "'이름' in student: " + ('이름' in student) + '\n';
+        output += "'성별' in student: " + ('성별' in student);
+
+        // 출력
+        alert(output);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
