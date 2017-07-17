@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>익명 함수를 리턴하는 함수</title>
+    <script>
+        function returnFunction() {
+            return function () {
+                alert('Hello Function...');
+            };
+        }
+
+        // 함수 호출
+        // 함수가 리턴되므로, 한번 더 호출해서 alert() 함수를 실행합니다.
+        returnFunction()();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

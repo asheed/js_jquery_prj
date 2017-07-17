@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>단위 실행</title>
+    <script>
+        // 0초 후에 alert함수가 실행될 것 같지만...
+        setTimeout(function () {
+            alert('Set Timeout');
+        }, 0);
+
+        // 아래 문장이 무한 루프이므로...alert문은 절대 실행되지 않음.
+        while (true) { }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

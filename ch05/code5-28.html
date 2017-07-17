@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>클로저(2)</title>
+    <script>
+        // 함수 선언
+        function test(name) {
+            var output = 'Hello ' + name + ' .. !';
+            return function () {
+                alert(output);
+            }
+        }
+
+        // 변수 선언
+        var test_1 = test('Web');
+        var test_2 = test('JavaScript');
+
+        // 함수 호출
+        test_1();
+        test_2();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Infinity 값 비교</title>
+    <script>
+        var number = -10 / 0;
+        alert(number);
+
+        alert(number + ' : ' + isFinite(number));
+
+        if (number == Infinity || number == -Infinity) {
+            alert('Infinity 입니다.');
+        } else {
+            alert('Infinity가 아닙니다.');
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
