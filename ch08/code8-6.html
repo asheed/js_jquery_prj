@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>toString() 메소드 재선언</title>
+    <script>
+        // 변수 선언
+        var student = {
+            name: '윤명월',
+            grade: '대학교 1학년',
+            toString: function () {
+                return this.name + ' : ' + this.grade;
+            }
+        };
+
+        // 출력
+        alert(student);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
