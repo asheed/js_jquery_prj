@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>간단한 음악 재생 프로그램</title>
+    <script>
+        // 변수 선언
+//        alert(location.pathname);
+        var mode = 'pause';
+        var audio = new Audio('love.mp3');
+        var togglePlay = function () {
+            var btn = document.getElementById('playandpause');
+
+            if (mode == 'pause') {
+                audio.play();
+                mode = 'play';
+                btn.innerText = '플레이';
+            } else {
+                audio.pause();
+                mode = 'pause';
+                btn.innerText = '일시정지';
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="file" id="fileSelector" accept="audio/*">
+    <button id="playandpause" onclick="togglePlay()">플레이</button>
+    <input type="number" onchange="audio.currentTime=this.value"/>
+    <input type="number" onchange="audio.volume=this.value"/>
+    <script>
+        document.getElementById('fileSelector').addEventListener('change', handleFileSelection, false);
+
+        function handleFileSelection(evt) {
+            var file = evt.target.files;
+        }
+    </script>
+</body>
+</html>
