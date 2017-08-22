@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>클래스 테스트</title>
+    <script>
+        'use strict';
+        class Contact {
+            constructor (id, name, phone) {
+                this.id = id;
+                this.setContact(name, phone);
+            }
+
+            setContact (name, phone) {
+                this.name = name;
+                this.phone = phone;
+            }
+        }
+
+        var c1 = new Contact(1,"안우진","010-9897-1340");
+        console.log(c1);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

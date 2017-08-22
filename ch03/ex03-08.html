@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>ex03-08</title>
+    <script>
+        function test(callback) {
+            if (typeof callback != "function") {
+                throw "callback 파라미터값으로 함수만 전달 가능합니다.";
+            }
+            callback();
+        }
+
+        test(function() {
+            console.log("hello");
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

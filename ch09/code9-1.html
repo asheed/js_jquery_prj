@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Window 객체의 속성</title>
+    <script>
+        // 출력
+        var output = '';
+        for (var key in window) {
+            output += '*' + key + ': ' + window[key] + '\n';
+        }
+        console.log(output);
+        var child = window.open('', '', 'width=300, height=200');
+        child.document.write('<h1>From Parent Window</h1>');
+        window.open('http://hanb.co.kr', 'child', 'width=600, height=300', true);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
