@@ -5,19 +5,19 @@
     <title>브라우저의 크기를 화면에 일치하는 방법</title>
     <script>
         // 변수 선언
-        var child = window.open('', '', 'width=300, height=200');
-        var width = screen.width;
-        var height = screen.height;
+        var child = window.open('', '', 'width=300, height=200');   // 창을 하나 연다.
+        var width = screen.width;                                   // 스크린의 너비
+        var height = screen.height;                                 // 스크린의 높이
 
-        child.moveTo(0, 0);
-        child.resizeTo(width, height);
+        child.moveTo(0, 0);                                         // 좌상단으로 윈도우 창 이동
+        child.resizeTo(width, height);                              // 크기를 스크린 만하게
 
         // 1초마다 함수 실행
         setInterval(function () {
-            child.resizeBy(-20, -20);
-            child.moveBy(10, 10);
+            child.resizeBy(-20, -20);                               // 20픽셀씩 창크기를 줄인다
+            child.moveBy(10, 10);                                   // 10픽셀씩 창을 이동
         }, 1000);
-        alert(output);
+
     </script>
 </head>
 <body>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>String 객체의 메서드</title>
+    <script>
+        var a = "간장 공장 공장장은 강 공장장이고, 된장 공장 공장장은 공 공장장이다.";
+        var b = "hello";
+        var c = "world";
+
+        alert("a.charAt(3) : " + a.charAt(3));
+        alert("a.indexOf('공장') : " + a.indexOf("공장"));
+        alert("b.concat(' ' + c) : " + b.concat(" " + c));
+        alert("b.toUpperCase() : " + b.toUpperCase());
+        alert("a.replace(/\s/g, '_') : " + a.replace(/\s/g, "_"));
+        alert("a.substring(3, 10) : [" + a.substring(3, 10) + "]");
+        alert("a.slice(1, -3) : " + a.slice(1, -3));
+
+        var arr1 = a.split(" ");
+        alert("a.split(' ') : " + arr1);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

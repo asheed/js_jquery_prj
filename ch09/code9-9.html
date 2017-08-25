@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>location 객체의 속성</title>
+    <script>
+        // 출력
+        var output = '';
+        for (var key in location) {
+            output += '*' + key + ': ' + location[key] + '\n';
+        }
+        alert(output);
+        // 아래는 모두 페이지 이동
+        //location.assign('http://hanb.co.kr');
+        //location.replace('http://hanb.co.kr');
+        //location = 'http://hanb.co.kr';
+        //location.href = 'http://hanb.co.kr';
+
+        // 아래는 모두 페이지 리로드
+        location.reload();
+        location = location;
+        location.href = location.href;
+        location.assign(location);
+        location.replace(location);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

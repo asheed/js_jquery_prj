@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            // 변수 선언
+            var header = document.createElement('h1');
+            var textNode = document.createTextNode('안녕 DOM');
+            var img = document.createElement('img');
+
+            // 이미지 속성
+            img.src = 'Penguins.jpg';
+            img.width = 500;
+            img.height = 350;
+
+            // 노드 연결
+            header.appendChild(textNode);
+            document.body.appendChild(header);
+            document.body.appendChild(img);
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

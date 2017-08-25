@@ -11,8 +11,14 @@
         }
         console.log(output);
         var child = window.open('', '', 'width=300, height=200');
-        child.document.write('<h1>From Parent Window</h1>');
+        if (child) {
+            child.document.write('<h1>From Parent Window</h1>');
+        } else {
+            alert("팝업을 차단해주세요!");
+        }
+
         window.open('http://hanb.co.kr', 'child', 'width=600, height=300', true);
+
     </script>
 </head>
 <body>
