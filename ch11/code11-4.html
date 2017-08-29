@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>고전 이벤트 모델을 사용한 이벤트 연결</title>
+    <script>
+        window.onload = function () {
+            // 변수 선언
+            var hearder = document.getElementById('header').onclick = function () {
+                alert(this);
+            };
+
+            var btn1 = document.getElementById('btn1').onclick = function () {
+                alert(this);
+            };
+        };
+    </script>
+</head>
+<body>
+    <h1 id="header">클릭!</h1>
+    <button id="btn1">클릭버튼</button>
+</body>
+</html>

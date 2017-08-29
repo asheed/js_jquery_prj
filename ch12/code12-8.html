@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>exception 객체 속성</title>
+    <script>
+        try {
+            var array = new Array(999999999999);
+        } catch (exception) {
+            alert("Line : " + exception.lineNumber + ", " + exception.name + ": " + exception.message + "(" + exception.description + ")");
+//            var output = '';
+//            for (var i in exception) {
+//                output += i + ': ' + exception[i] + '\n';
+//            }
+//            alert(output);
+//            console.log(output);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트 전달</title>
+    <style>
+        * { border: 3px solid black; }
+    </style>
+    <script>
+//        window.onload = function () {
+//
+//        };
+    </script>
+</head>
+<body>
+    <div onclick="alert('outer-div')">
+        <div onclick="alert('inner-div')">
+            <h1 onclick="alert('header')">
+                <p onclick="alert('pharagraph')">Pharagraph</p>
+            </h1>
+        </div>
+    </div>
+</body>
+</html>

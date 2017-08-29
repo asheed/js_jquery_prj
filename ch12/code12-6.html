@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>try-catch</title>
+    <script>
+        function registerEventListener(node, event, listener) {
+            try {
+                // firefox, chrome, safari, opera
+                node.addEventListener(event, listener, false);
+            } catch (exception) {
+                // ie
+                node.attachEvent('on' + event, listener);
+            }
+        }
+        window.onload = function () {
+            var header = document.getElementById('header');
+            header.addEventListener('click', function () {
+                alert('Click');
+            });
+//            registerEventListener(header, 'click', function () {
+//                alert('Click');
+//            });
+        };
+    </script>
+</head>
+<body>
+    <h1 id="header">클릭</h1>
+</body>
+</html>

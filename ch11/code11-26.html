@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트 전달 막기</title>
+    <script>
+        window.onload = function () {
+            // 이벤트 연결
+            document.getElementById('header').onclick = function () {
+                alert('header');
+            };
+            document.getElementById('paragraph').onclick = function (e) {
+                // 이벤트 객체 처리
+
+                // 이벤트 발생 알림
+                alert('paragraph');
+
+                // 이벤트 전달 제거
+                e.cancelb
+                e.stopPropagation();
+            };
+        };
+    </script>
+</head>
+<body>
+    <h1 id="header">
+        <p id="paragraph">Paragraph</p>
+    </h1>
+</body>
+</html>

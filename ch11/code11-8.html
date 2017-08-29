@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트 객체</title>
+    <script>
+        window.onload = function () {
+            document.getElementById('header').onclick = function (e) {
+                // 이벤트 객체 설정
+                document.body.innerHTML = '';
+                for (var key in e) {
+                    document.body.innerHTML += '<p>' + key + ': ' + e[key] + '</p>';
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+    <h1 id="header">클릭!</h1>
+</body>
+</html>

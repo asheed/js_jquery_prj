@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>표준 이벤트 모델</title>
+    <script>
+        // 윈도우 로드
+        window.onload = function () {
+            var header = document.getElementById('my-header');
+
+            header.addEventListener('click', function () {
+                this.innerHTML += '+';
+            });
+        };
+    </script>
+</head>
+<body>
+    <h1 id="my-header">클릭!</h1>
+</body>
+</html>

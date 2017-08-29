@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>ie 이벤트 모델</title>
+    <script>
+        // 윈도우 로드
+        window.attachEvent('onload', function () {
+            var header = document.getElementById('my-header');
+
+            // 이벤트 연결
+            header.attachEvent('onclick', function () {
+                alert('클릭');
+            });
+            header.attachEvent('onclick', function () {
+                alert('클릭');
+            });
+            header.attachEvent('onclick', function () {
+                alert('클릭');
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1 id="my-header">클릭!</h1>
+</body>
+</html>
