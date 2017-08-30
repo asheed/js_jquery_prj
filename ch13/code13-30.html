@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script
+            src="https://code.jquery.com/jquery-1.12.4.js"
+            integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+            crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            // 변수 선언
+            var array = [
+                { name: '한빛 미디어', link: 'http://hanb.co.kr' },
+                { name: '네이버', link: 'http://naver.com' },
+                { name: '다음', link: 'http://daum.net' },
+                { name: '구글', link: 'http://google.com' }
+            ];
+
+            // $.each() 메서드 사용
+            $.each(array, function (index, item) {
+               // 변수 선언
+                var output = '';
+                output += '<a href="' + item.link + '" target="_blank">';
+                output += '    <h1>' + item.name + '</h1>';
+                output += '</a>';
+
+                // 붙이기
+                document.body.innerHTML += output;
+            });
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>
